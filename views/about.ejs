@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container">
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal text-body-emphasis">About us</h1>
+        <p class="fs-5 text-body-secondary">
+            Welcome to our Programming Quotes Website! Our website is driven by the Programming Quotes 
+            API, ensuring that each time you click the "Generate" button, you'll be greeted with fresh 
+            and thought-provoking programming quotes. Using this website is a breeze. A simple click on 
+            the "Generate" button reveals a new random programming quote that will captivate your mind 
+            and broaden your perspective. The dynamic nature of the API guarantees a unique experience 
+            with each visit, ensuring you never run out of fresh insights and motivations.
+        </p>
+    </div>
+
+    <div class="p-5 mb-4 bg-body rounded-3 pricing-header p-3 pb-md-4 mx-auto text-center">
+        <form action="/home" method="post">
+            <button type="submit" class="w-5 btn btn-lg btn-outline-secondary">Generate Another</button>
+        </form>
+    </div>
+
+</div>
+
+<%- include("partials/footer.ejs") %>

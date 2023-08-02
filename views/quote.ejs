@@ -1,0 +1,37 @@
+<%- include("partials/header.ejs") %>
+
+<% if(locals.bulk){ %>
+
+    <div class="container">
+        <div class="p-5 mb-4 bg-body rounded-3">
+
+            <% bulk.forEach((q) => { %>
+                <div class="container-fluid py-5 mb-5 text-center">
+                    <p class="fs-4"> <%= q.quote %> </p>
+                    <p> <i> by <%= q.author %> </i> </p>
+                </div>
+            <% }) %>
+            
+        </div>
+    </div>
+
+<% } else{ %>
+
+    <div class="container p-5 mb-4 bg-body rounded-3">
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <p class="fs-4 m-5"> <%= quote %> </p>
+            <p> <i> by <%= author %> </i> </p>
+        </div>
+    </div>
+
+<% } %>
+
+<div class="container p-5 mb-4 bg-body rounded-3 pricing-header p-3 pb-md-4 mx-auto text-center">
+    <form action="/home" method="post">
+        <button type="submit" class="w-5 btn btn-lg btn-outline-secondary">Generate Another</button>
+    </form>
+</div>
+
+
+
+<%- include("partials/footer.ejs") %>
